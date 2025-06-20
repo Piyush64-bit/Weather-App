@@ -112,7 +112,7 @@ function App() {
           className="text-center mb-12"
         >
           <h1 className={`text-5xl md:text-7xl font-bold ${theme.text} mb-6`}>
-            Weather
+            Weather64
             <span className={`block text-4xl md:text-5xl font-light ${theme.accent} mt-2`}>
               Forecast
             </span>
