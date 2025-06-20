@@ -5,8 +5,7 @@ Enjoy beautiful Lottie animations and a responsive, user-friendly interface.
 
 <img src="https://raw.githubusercontent.com/Piyush64-bit/Weather-App/master/public/screenreacording.gif" 
              alt="Portfolio Preview" 
-             width="150" 
-             style="border-radius: 12px;" />
+             width="250"/>
 
 ---
 
