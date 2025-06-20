@@ -3,7 +3,7 @@
 A sleek and modern weather application built with React, Vite, and TypeScript. Instantly check the current weather and forecast for any city in the world!  
 Enjoy beautiful Lottie animations and a responsive, user-friendly interface.
 
-<img src="https://raw.githubusercontent.com/Piyush64-bit/WeatherApp/main/public/screenreacording.gif" 
+<img src="https://raw.githubusercontent.com/Piyush64-bit/WeatherApp/master/public/screenreacording.gif" 
              alt="Portfolio Preview" 
              width="150" 
              style="border-radius: 12px;" />
