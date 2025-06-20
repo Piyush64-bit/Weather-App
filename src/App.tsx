@@ -12,6 +12,7 @@ import { SearchBar } from './components/SearchBar';
 import { WeatherCard } from './components/WeatherCard';
 import LoadingAnimation from './components/LoadingAnimation';
 import { ErrorMessage } from './components/ErrorMessage';
+import { FaCloudSun, FaHeart, FaCode } from "react-icons/fa";
 
 function App() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
@@ -69,7 +70,7 @@ function App() {
 
   // Load default weather on mount
   useEffect(() => {
-    handleCitySearch('London');
+    handleCitySearch('Jaipur');
   }, []);
 
   return (
@@ -152,16 +153,37 @@ function App() {
           )}
         </AnimatePresence>
 
-        <motion.footer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className={`text-center mt-20 ${theme.accent}`}
-        >
-          <p className="text-sm">
-            Weather data provided by OpenWeatherMap API • Animations powered by Lottie
-          </p>
-        </motion.footer>
+
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.5, duration: 1 }}
+      className={`text-center mt-20 py-6 px-4 ${theme.accent} relative z-10`}
+    >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="space-y-2"
+      >
+        <p className="text-sm flex justify-center items-center gap-2 text-gray-500 dark:text-gray-300">
+          <FaCloudSun className="text-yellow-400 animate-pulse" />
+          Weather data from <span className="font-semibold text-blue-500">OpenWeatherMap API</span>
+        </p>
+        <p className="text-sm flex justify-center items-center gap-2 text-gray-500 dark:text-gray-300">
+          <FaCode className="text-green-400 animate-bounce" />
+          Animations via <span className="font-semibold text-pink-500">Lottie</span>
+        </p>
+        <p className="text-sm text-gray-600 dark:text-gray-300">
+          © 2025 • Designed & Developed with{" "}
+          <FaHeart className="inline text-red-400 animate-ping mx-1" /> by{" "}
+          <span className="font-bold text-gradient bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
+            P I Y U $ H
+          </span>
+        </p>
+      </motion.div>
+    </motion.footer>
+
       </div>
     </div>
   );
